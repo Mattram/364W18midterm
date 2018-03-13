@@ -1,0 +1,19 @@
+
+
+{% block content1 %}
+
+<form action="{{ url_for('home') }}" method="POST">
+    {{ form.name.label() }}{{ form.name() }}<br>
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+<ul>
+  <li><a href="{{ url_for('home')}}">Home</a></li>
+  <li><a href="{{ url_for('all_names')}}">Names</a></li>
+  <li><a href="{{ url_for('index')}}">Index</a></li>
+  <li><a href="{{ url_for('alltweets')}}">all tweets</a></li>
+  <li><a href="{{ url_for('allhashtags')}}">all hashtags</a></li>
+  <li><a href="{{ url_for('search')}}">search twitter by hashtag</a></li>
+</ul>
+
+{% endblock %}

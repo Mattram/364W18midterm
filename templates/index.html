@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+<form action="{{ url_for('index') }}" method="POST">
+    {{ form.content.label() }}{{ form.content() }}<br>
+    {{ form.username.label() }}{{ form.username() }}<br>
+    {{ form.hashtag.label() }}{{ form.hashtag() }}<br>
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+{% endblock %}

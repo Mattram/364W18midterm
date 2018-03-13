@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% for num in statuses[:5] %}
+<h1> tweet:{{ statuses[num]["text"] }}#{{ statuses[num]["hashtags"]}}...</h1>
+
+</ul>

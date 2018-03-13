@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% if not hashtags %}
+    <h1>There are no hashtags!<h1>
+{% endif %}
+<ul>
+{% for ht in hashtags %}
+    <li>#{{ ht[0] }}</li><br>
+{% endfor %}
+</ul>
